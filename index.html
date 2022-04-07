@@ -1,28 +1,18 @@
-<input id="pesquisa">
-<ul id="lista"></ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandas de Rock</title>
+</head>
+<body>
 
-<script>
-    bandas = ["Artic Monkeys", "Blink-182","Florence + The Machine", "Fleetwood Mac", "Foo Fighters", "Guns N'Roses", "Kings of Leon", "Linkin Park", "My Chemical Romance", "Of Monsters and Men", "OneRepublic", "Panic! at the Disco", "Pearl Jam", "Queen", "Radioheand", "Red Hot Chili Peppers", "The Beatles", "The Cure", "The Doors", "The Killers", "The Neighbourhood", "The Police","The Smashing Pumpkins", "U2", "Vampire Weekend", "Yeah Yeah Yeah"];
+    <input id="pesquisa">
+    <ul id="lista"></ul>
+    
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
 
-    listaBandas = ""
 
-    for(indice in bandas){
-        listaBandas += "<li>" + bandas[indice]+"</li>"
-        bandas[indice] = bandas[indice].toLowerCase()
-    }
-        lista.innerHTML = listaBandas
-
-        pesquisa.onkeyup = function(e){
-            listaBandas = this.value
-
-            r = new RegExp(listaBandas, "g")
-
-            for(indice in bandas){
-                if(bandas[indice].match(r) ){
-                    lista.children[indice].removeAttribute("style")
-                }else{
-                    lista.children[indice].style.display="none"
-                }
-            }
-        }
-</script>
