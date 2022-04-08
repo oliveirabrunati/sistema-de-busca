@@ -8,7 +8,7 @@ for(indice in bandas){
 }
     lista.innerHTML = listaBandas
 
-    pesquisa.onkeyup = function(e){
+    pesquisa.onkeyup = function(){
         listaBandas = this.value
 
         r = new RegExp(listaBandas, "g")
